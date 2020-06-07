@@ -1,0 +1,113 @@
+
+
+*{
+    font-family: "SF Mono";
+    font-size: 28px;
+}
+
+:root {
+    --font: "SF Mono";
+    --background: #1a1c22;
+    --foreground: #fffffe;
+    --branch: 1px solid #a7a9be;
+    --yellow: #d08770;
+    --pink: #bf616a;
+    --blue: #5e81ac;
+}
+
+html {
+    font-size: 22px;
+}
+
+body {
+    background: var(--background);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+.prompt {
+    font-family: var(--font);
+    color: var(--foreground);
+}
+
+.prompt~.prompt {
+    padding: 1.5rem 0 0.3125rem;
+}
+
+span {
+    color: var(--yellow);
+}
+
+h1 {
+    display: inline;
+    font-family: var(--font);
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--pink);
+}
+
+.tree > ul {
+    margin: 0;
+    padding-left: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding-left: 2.5rem;
+}
+
+li {
+    position: relative;
+}
+
+li::before, li::after {
+    content: "";
+    position: absolute;
+    left: -0.75rem;
+}
+
+li::before {
+    border-top: var(--branch);
+    top: 0.75rem;
+    width: 0.5rem;
+}
+
+li::after {
+    border-left: var(--branch);
+    height: 100%;
+    top: 0.25rem;
+}
+
+li:last-child::after {
+    height: 0.5rem;
+}
+
+a {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--foreground);
+    text-decoration: none;
+    outline: none;
+}
+
+a:hover {
+    color: var(--background);
+    background: var(--blue);
+}
+
+form h1 {
+    padding-left: 0.125rem;
+}
+
+input {
+    font-family: var(--font);
+    font-size: 1rem;
+    color: var(--foreground);
+    background-color: var(--background);
+    border: none;
+}
